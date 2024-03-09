@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer namorar comigo, Ana?</h1>
+    <button id="simButton">Sim</button>
+    <button id="naoButton">Não</button>
+
+    <script>
+        const naoButton = document.getElementById('naoButton');
+        naoButton.addEventListener('mouseover', () => {
+            // Altera a posição do botão "Não" quando o mouse passa por cima
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            naoButton.style.position = 'absolute';
+            naoButton.style.left = `${randomX}px`;
+            naoButton.style.top = `${randomY}px`;
+        });
+
+        const simButton = document.getElementById('simButton');
+        simButton.addEventListener('click', () => {
+            // Exibe a mensagem quando o usuário clica em "Sim"
+            alert('Ai love iu, nega!');
+        });
+    </script>
+</body>
+</html>
